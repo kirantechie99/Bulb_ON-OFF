@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buld ON/OFF</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+
+        }
+
+        .title {
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+
+        .img{
+            padding: 20px;
+        }
+
+        #turnon{
+            border: 1px;
+            border-radius: 4px;
+            padding: 15px;
+            margin-right: 40px;
+            background-color: green;
+            color: white;
+        }
+
+        #turnoff{
+            border: 1px;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            /* margin-left: 40px; */
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="main">
+            <h1 class="title">Welcome to Bulb ON/OFF Game</h1>
+            <img class="img" id="image" src="off.png" alt="buld_off" width="200px"><br>
+            <button id = "turnon">Turn On the Light</button>
+            <button id = "turnoff">Turn Off the Light</button>
+        </div>
+    </center>
+    <script>
+        document.getElementById('turnon').addEventListener('click', function(){
+            document.getElementById('image').src = 'on.png';
+        });
+        document.getElementById('turnoff').addEventListener('click', ()=>{
+            document.getElementById('image').src = 'off.png';
+        });
+
+        let img = document.getElementById('image');
+        img.addEventListener('mouseover', ()=>{
+           alert('Use Buttons to Turn ON or OFF the Bulb');
+        });
+        
+
+    </script>
+</body>
+
+</html>
